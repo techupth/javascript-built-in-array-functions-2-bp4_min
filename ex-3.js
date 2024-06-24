@@ -372,6 +372,12 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-
+function filterBill(bills){
+  return bills.member !== null
+}
+function nameBill(bills){
+  return bills.member.name
+}
 // Start coding here
-const billMembers;
+const billMembers = bills.filter(filterBill).map(nameBill);
+console.log(billMembers)
